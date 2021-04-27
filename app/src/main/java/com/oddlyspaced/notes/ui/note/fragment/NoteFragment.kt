@@ -47,10 +47,6 @@ class NoteFragment: Fragment() {
                 viewmodel.toggleEditing()
             }
         }
-
-        binding.fabAddItem.setOnClickListener {
-            viewmodel.addItem("Sample Item")
-        }
     }
 
     private fun setupRecyclerView() {
@@ -99,11 +95,7 @@ class NoteFragment: Fragment() {
         viewmodel.content.observe(viewLifecycleOwner, { items ->
             when (items.size) {
                 0 -> {
-                    binding.consEmptyAdd.setOnClickListener {
-                        viewmodel.toggleEditing()
-                        binding.consEmptyAdd.isVisible = false
-                        binding.consSingleItem.isVisible = true
-                    }
+                    binding.consEmptyAdd.isVisible = true
                 }
                 1 -> {
                     binding.consEmptyAdd.isVisible = false
