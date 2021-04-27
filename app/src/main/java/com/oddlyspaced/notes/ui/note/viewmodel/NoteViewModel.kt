@@ -25,7 +25,7 @@ class NoteViewModel(noteJson: String): ViewModel() {
     private val note: Note = if (noteJson.isEmpty()) {
         Note(
             -1,
-            "",
+            "Note Title",
             "2020",
             listOf()
         )
