@@ -82,6 +82,8 @@ class NoteFragment: Fragment() {
                 etContent.isVisible = editing
                 txContent.isVisible = !editing
 
+                binding.fabAddItem.isVisible = editing
+
                 imgIcon.setImageResource(if (editing) R.drawable.ic_save else R.drawable.ic_edit)
             }
 
